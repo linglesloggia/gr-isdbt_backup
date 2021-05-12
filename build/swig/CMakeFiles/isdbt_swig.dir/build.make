@@ -79,7 +79,7 @@ isdbt_swig_EXTERNAL_OBJECTS =
 
 swig/_isdbt_swig.so: swig/CMakeFiles/isdbt_swig.dir/CMakeFiles/isdbt_swig.dir/isdbt_swigPYTHON_wrap.cxx.o
 swig/_isdbt_swig.so: swig/CMakeFiles/isdbt_swig.dir/build.make
-swig/_isdbt_swig.so: lib/libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown
+swig/_isdbt_swig.so: lib/libgnuradio-isdbt.so.cfefc8ed
 swig/_isdbt_swig.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 swig/_isdbt_swig.so: /usr/lib/x86_64-linux-gnu/libgnuradio-filter.so.3.8.1.0
 swig/_isdbt_swig.so: /usr/lib/x86_64-linux-gnu/libgnuradio-blocks.so.3.8.1.0

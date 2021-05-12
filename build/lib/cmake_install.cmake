@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,7 +39,7 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.cfefc8ed"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.1.0.0git"
       )
     if(EXISTS "${file}" AND
@@ -50,11 +50,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu" TYPE SHARED_LIBRARY FILES
-    "/home/lingles/fing/gr-isdbt/build/lib/libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown"
+    "/home/lingles/fing/gr-isdbt/build/lib/libgnuradio-isdbt.so.cfefc8ed"
     "/home/lingles/fing/gr-isdbt/build/lib/libgnuradio-isdbt.so.1.0.0git"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.cfefc8ed"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.1.0.0git"
       )
     if(EXISTS "${file}" AND
@@ -96,8 +96,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/isdbt" TYPE FILE FILES "/home/lingles/fing/gr-isdbt/build/lib/CMakeFiles/Export/lib/cmake/isdbt/gnuradio-isdbtTargets.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/isdbt" TYPE FILE FILES "/home/lingles/fing/gr-isdbt/build/lib/CMakeFiles/Export/lib/cmake/isdbt/gnuradio-isdbtTargets-release.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/isdbt" TYPE FILE FILES "/home/lingles/fing/gr-isdbt/build/lib/CMakeFiles/Export/lib/cmake/isdbt/gnuradio-isdbtTargets-debug.cmake")
   endif()
 endif()
 

@@ -19,7 +19,7 @@ file(REMOVE_RECURSE
   "libgnuradio-isdbt.pdb"
   "libgnuradio-isdbt.so"
   "libgnuradio-isdbt.so.1.0.0git"
-  "libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown"
+  "libgnuradio-isdbt.so.cfefc8ed"
 )
 
 # Per-language clean rules from dependency scanning.

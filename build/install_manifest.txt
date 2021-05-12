@@ -17,11 +17,11 @@
 /usr/local/include/isdbt/ofdm_synchronization.h
 /usr/local/include/isdbt/tmcc_decoder.h
 /usr/local/include/isdbt/subset_of_carriers.h
-/usr/local/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.v1.0-compat-xxx-xunknown
+/usr/local/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.cfefc8ed
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-isdbt.so.1.0.0git
 /usr/local/lib/x86_64-linux-gnu/libgnuradio-isdbt.so
 /usr/local/lib/cmake/isdbt/gnuradio-isdbtTargets.cmake
-/usr/local/lib/cmake/isdbt/gnuradio-isdbtTargets-release.cmake
+/usr/local/lib/cmake/isdbt/gnuradio-isdbtTargets-debug.cmake
 /usr/local/lib/cmake/isdbt/gnuradio-isdbtConfig.cmake
 /usr/local/lib/python3/dist-packages/isdbt/_isdbt_swig.so
 /usr/local/lib/python3/dist-packages/isdbt/isdbt_swig.py

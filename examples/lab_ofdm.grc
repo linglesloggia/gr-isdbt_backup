@@ -1032,7 +1032,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    cp_length: '0.250'
+    cp_length: '0.0625'
     interpolate: 'True'
     maxoutbuf: '0'
     minoutbuf: '0'

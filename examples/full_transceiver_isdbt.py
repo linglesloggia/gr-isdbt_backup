@@ -322,7 +322,7 @@ class full_transceiver_isdbt(gr.top_block, Qt.QWidget):
         self.isdbt_symbol_demapper_0 = isdbt.symbol_demapper(3, 13, 4, 0, 4, 0, 4)
         self.isdbt_subset_of_carriers_0 = isdbt.subset_of_carriers(5617, 0, 100)
         self.isdbt_pilot_signals_0 = isdbt.pilot_signals(3)
-        self.isdbt_ofdm_synchronization_0 = isdbt.ofdm_synchronization(3, 0.250, True)
+        self.isdbt_ofdm_synchronization_0 = isdbt.ofdm_synchronization(3, 0.0625, True)
         self.isdbt_hierarchical_combinator_0 = isdbt.hierarchical_combinator(3, 13, 0, 0)
         self.isdbt_frequency_interleaver_0 = isdbt.frequency_interleaver(False, 3)
         self.isdbt_frequency_deinterleaver_0 = isdbt.frequency_deinterleaver(False, 3)

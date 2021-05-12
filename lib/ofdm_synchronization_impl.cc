@@ -165,10 +165,14 @@ namespace gr {
                   d_channel_gain = new gr_complex[d_active_carriers]; 
                   d_channel_gain_mag_sq = new float[d_active_carriers];
                   d_ones = new float[d_active_carriers];
+
                   for(int i=0; i<d_active_carriers; i++)
                   {
                       d_ones[i] = 1.0;
                   }
+
+
+
                   d_channel_gain_inv = new gr_complex[d_active_carriers];
 
                   d_coeffs_linear_estimate_first = new gr_complex[11]; 
@@ -702,14 +706,31 @@ namespace gr {
 
                 // Calculate time delay and frequency correction
                 float sum_aux = 0;
+
+                /*
+                int N = 10000;
+                lv_32fc_t y;
+                lv_32fc_t *x = (lv_32fc_t*)volk_malloc(N*sizeof(lv_32fc_t), volk_get_alignment());
+
+                //float *t = (float*)volk_malloc(N*sizeof(float), volk_get_alignment());
+                //volk_32fc_32f_dot_prod_32fc(&y, x, t, d_cp_length);*/
+
+                float *d_ones_ = (float*)volk_malloc(d_active_carriers*sizeof(float), volk_get_alignment());
+
+                for(int i=0; i<d_active_carriers; i++)
+                {
+                    d_ones_[i] = 1.0;
+                }
+
+
                 for (int i = lookup_start - 1; i >= lookup_stop; i--)
                 {
                     int k = i - lookup_stop;
 
                     //TODO no accumulator for complexes in VOLK for the moment.    
                     
-                    //volk_32fc_32f_dot_prod_32fc(&d_gamma[k], &d_corr[i-d_cp_length+1-d_fft_length], d_ones, d_cp_length);
-                    
+                    volk_32fc_32f_dot_prod_32fc(&d_gamma[k], &d_corr[i-d_cp_length+1-d_fft_length], d_ones_, d_cp_length);
+
                     volk_32f_accumulator_s32f(&d_phi[k], &d_norm[i-d_cp_length+1], d_cp_length);
                     volk_32f_accumulator_s32f(&sum_aux, &d_norm[i-d_cp_length+1-d_fft_length], d_cp_length);
                     d_phi[k] += sum_aux;
